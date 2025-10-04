@@ -1,12 +1,54 @@
-# React + Vite
+# Product Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
+A React-based dashboard for managing products. Features include add, edit, delete, search, and filter.
 
-Currently, two official plugins are available:
+## Features
+- Add new products
+- Edit existing products
+- Delete products
+- Search by title
+- Filter by category
+- Responsive design with Tailwind CSS
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Folder Structure
+```
+react/pmd/
+├── index.html
+├── package.json
+├── src/
+│   ├── App.jsx
+│   ├── components/
+│   │   ├── ProductForm.jsx
+│   │   ├── ProductList.jsx
+│   │   └── SearchFilter.jsx
+│   └── index.css
+```
 
-## Expanding the ESLint configuration
+## Components
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### App.jsx
+Main app logic, state management, and layout.
+
+### ProductForm.jsx
+Form for adding/updating products.
+
+### ProductList.jsx
+Displays products in a grid, with edit/delete buttons.
+
+### SearchFilter.jsx
+Inputs for searching and filtering products.
+
+## Usage
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+2. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## License
+MIT
