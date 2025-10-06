@@ -25,7 +25,7 @@ const ProductForm = ({ onSubmit, editingProduct }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="card bg-white p-4 lg:p-6 rounded-xl shadow-md mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4 lg:gap-6">
+    <form onSubmit={handleSubmit} className="card bg-white p-4 rounded-xl shadow-md mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
       {/* Title */}
       <div>
         <label className="block text-gray-700 mb-1">Title</label>

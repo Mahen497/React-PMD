@@ -50,5 +50,37 @@ Inputs for searching and filtering products.
    npm run dev
    ```
 
+## Future Updation
+
+| Status | Feature/Improvement |
+|--------|--------------------|
+| ✅     | Basic CRUD (Add/Edit/Delete) |
+| ✅     | Search & Filter |
+| ⏳     | Backend Integration |
+| ⏳     | Authentication |
+| ⏳     | Product Image Upload |
+| ⏳     | Pagination/Infinite Scroll |
+| ⏳     | Sorting Options |
+| ⏳     | Export Data (CSV/PDF) |
+| ⏳     | Dashboard Analytics |
+| ⏳     | Unit/Integration Tests |
+| ⏳     | TypeScript Migration |
+| ⏳     | Improved Mobile UX |
+| ⏳     | API Documentation |
+| ⏳     | CI/CD Setup |
+
+- ✅ Complete
+- ⏳ Remaining/Working
+
+---
+
+## Update Log
+
+### Date: October 4, 2025
+
+**Pagination Component Improvements:**
+- Added accessibility with `aria-label` attributes for navigation and page buttons.
+- Implemented logic to show only a subset of page numbers when `totalPages` is large, with ellipsis and first/last page navigation.
+
 ## License
 MIT
