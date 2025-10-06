@@ -58,13 +58,11 @@ Inputs for searching and filtering products.
 | ✅     | Search & Filter |
 | ⏳     | Backend Integration |
 | ⏳     | Authentication |
-| ⏳     | Product Image Upload |
-| ⏳     | Pagination/Infinite Scroll |
+| ✅     | Pagination |
 | ⏳     | Sorting Options |
 | ⏳     | Export Data (CSV/PDF) |
 | ⏳     | Dashboard Analytics |
 | ⏳     | Unit/Integration Tests |
-| ⏳     | TypeScript Migration |
 | ⏳     | Improved Mobile UX |
 | ⏳     | API Documentation |
 | ⏳     | CI/CD Setup |
@@ -81,6 +79,17 @@ Inputs for searching and filtering products.
 **Pagination Component Improvements:**
 - Added accessibility with `aria-label` attributes for navigation and page buttons.
 - Implemented logic to show only a subset of page numbers when `totalPages` is large, with ellipsis and first/last page navigation.
+
+### Date: October 6, 2025
+
+- Improved the product form by adding an "Image URL" field for both add and update operations.
+- Fixed pagination logic so that new products do not appear repeatedly when navigating pages.
+- Moved pagination state and logic from `ProductList.jsx` to `App.jsx` for better control and synchronization with search/filter.
+- Ensured pagination resets to the first page when search or filter changes.
+- Enhanced grid and card responsiveness, including width and minimum width fixes.
+- Added a toggle feature for the search/filter panel, with smooth show/hide animation, and moved its control to `App.jsx`.
+- Provided code and guidance for managing search panel visibility from the parent component.
+- Helped synchronize search/filter and pagination for a better user experience.
 
 ## License
 MIT
