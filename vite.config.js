@@ -4,6 +4,6 @@ import tailwindcss from "@tailwindcss/vite";
 
 // 👇 Add base for GitHub Pages (important!)
 export default defineConfig({
-  base: '/pmd/',
+  base: '/React-PMD/',
   plugins: [react(), tailwindcss()],
 });
