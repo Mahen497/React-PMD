@@ -102,7 +102,7 @@ function App() {
             }
           </button>
           <h1 className="text-base md:2xl xl:text-3xl font-bold mb-6 text-center">
-            📦 Product Management Dashboard
+            📦 Product Management Dashboard (PMD)
           </h1>
           <ProductList
             products={filteredProducts}
