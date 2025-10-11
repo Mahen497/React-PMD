@@ -91,5 +91,202 @@ Inputs for searching and filtering products.
 - Provided code and guidance for managing search panel visibility from the parent component.
 - Helped synchronize search/filter and pagination for a better user experience.
 
+--------------------------------------------------------------------
+
+Perfect 👍 Let’s go step-by-step like you’re deploying your React (Vite + Tailwind) app to **GitHub Pages** for the *first time ever*.
+We’ll start from scratch — no setup assumed.
+
+---
+
+## 🪜 FULL DEPLOYMENT PROCESS — From Zero to Live Site
+
+---
+
+### 🧩 **Step 1: Create Your Vite React App**
+
+If you don’t already have a project:
+
+```bash
+npm create vite@latest React-PMD -- --template react
+```
+
+Then:
+
+```bash
+cd React-PMD
+npm install
+```
+
+---
+
+### 🎨 **Step 2: Add Tailwind CSS (optional but common)**
+
+Run:
+
+```bash
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+```
+
+Now open **`tailwind.config.js`** and replace content with:
+
+```js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+}
+```
+
+Then open **`src/index.css`** (or main CSS file) and add:
+
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+✅ Run `npm run dev` to confirm Tailwind works.
+
+---
+
+### ⚙️ **Step 3: Add GitHub Pages dependency**
+
+```bash
+npm install gh-pages --save-dev
+```
+
+---
+
+### 🏗️ **Step 4: Update `package.json`**
+
+Add the following:
+
+```json
+{
+  "homepage": "https://<your-username>.github.io/<repo-name>",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+```
+
+🧠 Example (for you):
+
+```json
+"homepage": "https://mahen497.github.io/React-PMD"
+```
+
+---
+
+### 🧱 **Step 5: Update `vite.config.js`**
+
+Open your project’s **vite.config.js**
+and set the correct base path 👇
+
+```js
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
+  base: '/React-PMD/', // must match your repo name
+})
+```
+
+---
+
+### 🪣 **Step 6: Initialize Git Repository**
+
+If not already done:
+
+```bash
+git init
+git add .
+git commit -m "Initial commit"
+```
+
+---
+
+### ☁️ **Step 7: Create a GitHub Repository**
+
+1. Go to GitHub → New Repository
+2. Name it: `React-PMD`
+3. Don’t add README (since project already has it)
+4. Copy the commands shown after creation and run them in your terminal:
+
+```bash
+git remote add origin https://github.com/<your-username>/React-PMD.git
+git branch -M main
+git push -u origin main
+```
+
+---
+
+### 🚀 **Step 8: Deploy to GitHub Pages**
+
+Now, simply run:
+
+```bash
+npm run deploy
+```
+
+✅ This:
+
+* Builds the app (`npm run build`)
+* Publishes `/dist` to the `gh-pages` branch
+* GitHub automatically hosts it
+
+---
+
+### 🌐 **Step 9: Verify & Open**
+
+Visit:
+
+```
+https://<your-username>.github.io/<repo-name>/
+```
+
+Example for you:
+👉 [https://mahen497.github.io/React-PMD/](https://mahen497.github.io/React-PMD/)
+
+---
+
+### ⚙️ **Step 10: (Optional) Fix GitHub Pages Settings**
+
+In case it doesn’t appear:
+
+1. Go to **Repo → Settings → Pages**
+2. Under **Source**, select:
+
+   ```
+   Deploy from branch
+   Branch: gh-pages  / (root)
+   ```
+3. Wait 1–2 minutes and refresh the link.
+
+---
+
+### ✅ Final Directory Check
+
+Your project should now look like this:
+
+```
+React-PMD/
+ ┣ src/
+ ┣ public/
+ ┣ dist/          ← auto-generated after build
+ ┣ package.json
+ ┣ vite.config.js
+ ┣ tailwind.config.js
+ ┗ index.html
+```
 ## License
 MIT
